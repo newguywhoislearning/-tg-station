@@ -130,7 +130,7 @@
 
 
 
-/mob/living/simple_animal/construct/wraith
+/mob/living/simple_animal/construct/wraith // Can now slash at APCs too
 	name = "Wraith"
 	real_name = "Wraith"
 	desc = "A wicked bladed shell contraption piloted by a bound spirit"
@@ -138,14 +138,15 @@
 	icon_living = "floating"
 	maxHealth = 75
 	health = 75
-	melee_damage_lower = 25
+	melee_damage_lower = 20    //Debuff to compensate for new powers
 	melee_damage_upper = 25
 	attacktext = "slashes"
 	speed = 0
 	see_in_dark = 7
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	construct_spells = list(/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift)
-	playstyle_string = "<B>You are a Wraith. Though relatively fragile, you are fast, deadly, and even able to phase through walls.</B>"
+	construct_spells = list(/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift, /obj/effect/proc_holder/spell/targeted/smoke/disable) // they now get para smoke too!
+	playstyle_string = "<B>You are a Wraith. Though relatively fragile, you are fast, deadly, and even able to phase through walls. Disable enemies with your special smoke and subdue them with your sharp claws</B>"
+
 
 
 
